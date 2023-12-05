@@ -13,6 +13,7 @@ const App = () => {
       <div className='h-[2000px]'>
 
       </div>
+      </div>
       
 
   );
