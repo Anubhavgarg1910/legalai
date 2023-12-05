@@ -1,13 +1,20 @@
 import React from "react";
+import Banner from './components/Banner'
+import Testimonials from './components/Testimonials'
 
-import Banner from "./components/Banner";
 
 const App = () => {
   return (
     <div>
-      <Banner />
-      <div className="h-[2000px]"></div>
-    </div>
+
+
+      <Banner/>
+      <Testimonials/>
+      <div className='h-[2000px]'>
+
+      </div>
+      
+
   );
 };
 
