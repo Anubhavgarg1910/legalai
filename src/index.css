@@ -20,5 +20,6 @@
   }
   .active {
     @apply text-accent-hover;
+
   }
 }
