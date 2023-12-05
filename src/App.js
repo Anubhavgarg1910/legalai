@@ -1,12 +1,14 @@
 import React from 'react'
 
 import Banner from './components/Banner'
+import Testimonials from './components/Testimonials'
 
 const App = () => {
   return (
     <div>
 
       <Banner/>
+      <Testimonials/>
       <div className='h-[2000px]'>
 
       </div>
