@@ -1,7 +1,7 @@
-import React from 'react'
-import Header from './Header'
-import Appointment from './Appointment'
-import LawyerImage from '../assets/img/lawyer_banner.png'
+import React from "react";
+import Header from "./Header";
+import Appointment from "./Appointment";
+import LawyerImage from "../assets/img/lawyer_banner.png";
 
 const Banner = () => {
   return (
@@ -25,18 +25,17 @@ const Banner = () => {
             rutrum sapien in lectus semper, eget vestibulum augue feugiat.
           </p>
           {/* Appointment */}
-          <div className='lg:absolute mx-auto max-w-[445px] lg:mx-0'>
+          <div className="lg:absolute mx-auto max-w-[445px] lg:mx-0">
             <Appointment />
           </div>
         </div>
         {/* Right Side */}
-        <div className='hidden flex-1 lg:flex lg:flex-col items-end'>
-        <img src={LawyerImage} alt=''/>
-
+        <div className="hidden flex-1 lg:flex lg:flex-col items-end">
+          <img src={LawyerImage} alt="" />
         </div>
       </div>
     </section>
   );
 };
 
-export default Banner
+export default Banner;
