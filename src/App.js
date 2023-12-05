@@ -1,11 +1,12 @@
-import React from 'react'
-
+import React from "react";
 import Banner from './components/Banner'
 import Testimonials from './components/Testimonials'
+
 
 const App = () => {
   return (
     <div>
+
 
       <Banner/>
       <Testimonials/>
@@ -13,8 +14,8 @@ const App = () => {
 
       </div>
       
-    </div>
-  )
-}
 
-export default App
+  );
+};
+
+export default App;
