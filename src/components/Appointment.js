@@ -10,7 +10,7 @@ max-w-[22rem] md:max-w-md mx-auto"
         className="text-white text-[28px] font-bold
 tracking-[0.3px] text-center"
       >
-        Get an appointment
+        Login
       </h3>
       <div
         className="w-[54px] h-[3px] bg-white my-6

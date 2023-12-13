@@ -30,12 +30,16 @@ export const navigation = [
     href: "home",
   },
   {
-    name: "What we do",
+    name: "Doc Summarization",
     href: "skills",
   },
   {
-    name: "Our team",
+    name: "Create Document",
     href: "team",
+  },
+  {
+    name: "Assistant",
+    href: "assistant",
   },
   {
     name: "Contact us",
@@ -69,40 +73,40 @@ export const testimonials = [
 export const skills = [
   {
     icon: Skill1,
-    title: "Corruption",
+    title: "Doc Summarization",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
   },
   {
     icon: Skill2,
-    title: "Employment",
+    title: "Create Document",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
   },
   {
     icon: Skill3,
-    title: "Real Estate",
+    title: "Assistant",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
   },
-  {
-    icon: Skill4,
-    title: "Taxes",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
-  },
-  {
-    icon: Skill5,
-    title: "Corporate",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
-  },
-  {
-    icon: Skill6,
-    title: "Banking",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
-  },
+  // {
+  //   icon: Skill4,
+  //   title: "Taxes",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+  // },
+  // {
+  //   icon: Skill5,
+  //   title: "Corporate",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+  // },
+  // {
+  //   icon: Skill6,
+  //   title: "Banking",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+  // },
 ];
 
 // team data
