@@ -3,7 +3,7 @@ import Header from "./Header";
 import Appointment from "./Appointment";
 import LawyerImage from "../assets/img/lawyer_banner.png";
 
-const Banner = () => {
+const Banner = ({ showAppointment }) => {
   return (
     <section
       id="home"
@@ -26,7 +26,7 @@ const Banner = () => {
           </p>
           {/* Appointment */}
           <div className="lg:absolute mx-auto max-w-[445px] lg:mx-0">
-            <Appointment />
+            {showAppointment ? <Appointment /> : null}
           </div>
         </div>
         {/* Right Side */}

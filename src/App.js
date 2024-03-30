@@ -1,23 +1,22 @@
 import React from "react";
-import Banner from "./components/Banner";
-import Testimonials from "./components/Testimonials";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import BackToTopBtn from "./components/BackToTopBtn";
+import HomePage from "./components/HomePage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DocSummary from "./components/DocSummary";
+import CreateDoc from "./components/CreateDoc";
 
 const App = () => {
   return (
-    <div>
-      <Banner />
-      <Testimonials />
-      <Skills />
-      <Contact />
-      <Footer />
-      <BackToTopBtn />
-
-      <div></div>
-    </div>
+    <BrowserRouter>
+      {/* <HomePage /> */}
+      <Routes>
+        <Route path="/" index element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/docSummarisation" element={<DocSummary />} />
+        <Route path="/createDoc" element={<CreateDoc />} />
+        <Route path="/assistant" element={<HomePage />} />
+        <Route path="/contact" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

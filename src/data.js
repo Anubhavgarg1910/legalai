@@ -27,23 +27,23 @@ import PinterestIcon from "../src/assets/img/social/pinterest.png";
 export const navigation = [
   {
     name: "Home",
-    href: "home",
+    href: "/home",
   },
   {
     name: "Doc Summarization",
-    href: "skills",
+    href: "/docSummarisation",
   },
   {
     name: "Create Document",
-    href: "team",
+    href: "/createDoc",
   },
   {
     name: "Assistant",
-    href: "assistant",
+    href: "/assistant",
   },
   {
     name: "Contact us",
-    href: "contact",
+    href: "/contact",
   },
 ];
 
