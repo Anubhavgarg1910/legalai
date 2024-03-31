@@ -15,7 +15,7 @@ const CreateDoc = () => {
       <Banner showAppointment={false} />
       <div
         className="lg:h-full lg:max-h-800
-        bg-gradient-to-t from-[#f8f3ec] to-[#e0c8ac]"
+        bg-gradient-to-t from-[#e0c8ac] to-[#f8f3ec]"
       >
         <div>
           <div>

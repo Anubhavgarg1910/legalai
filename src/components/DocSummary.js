@@ -29,20 +29,35 @@ const DocSummary = () => {
   };
   return (
     <div>
-      <Banner showAppointment={false} />
-      <div
-        className="lg:h-full lg:max-h-800
-        bg-gradient-to-t from-[#f8f3ec] to-[#e0c8ac]"
-      >
-        <div>
-          <div>
-            <input type="file" onChange={handleFileChange} />
-            <button onClick={handleSubmit}>Generate Summary</button>
-            {summary && <div>{summary}</div>}
-          </div>
+    <Banner showAppointment={false} />
+    <div
+      className="lg:h-full lg:max-h-800 
+      "
+    >
+      <div className="flex flex-col items-center justify-center h-full mb-8 pt-[100px] ">
+        <div className="flex mb-4 gap-x-[60px] p-5 ">
+          <input
+            type="file"
+            onChange={handleFileChange}
+            className="form-control"
+          />
+          <button
+            onClick={handleSubmit}
+            className="btn bg-primary hover:bg-primary-hover transition-all"
+          >
+            Generate Summary
+          </button>
         </div>
       </div>
+      <div className="flex flex-col items-center justify-center">
+      <textarea
+        className="  w-full max-w-md h-[250px] p-2 border border-gray-300 rounded mb-[40px]"
+      >
+        {summary && <div>{summary}</div>}
+      </textarea>
+      </div>
     </div>
+  </div>
   );
 };
 
