@@ -4,25 +4,50 @@ import Banner from "./Banner";
 const CreateDoc = () => {
   const [file, setFile] = useState(null);
   const [summary, setSummary] = useState("");
+  const [rentalOpen, setRentalOpen] = useState(false);
 
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+  const onRentalAgreement = () => {
+    console.log("xyz");
+    setRentalOpen(true);
   };
-
 
   return (
     <div>
       <Banner showAppointment={false} />
-      <div
-        className="lg:h-full lg:max-h-800
-        bg-gradient-to-t from-[#e0c8ac] to-[#f8f3ec]"
-      >
-        <div>
-          <div>
-            <input type="file" onChange={handleFileChange} />
-            {/* <button onClick={handleSubmit}>Generate Summary</button> */}
-            {summary && <div>{summary}</div>}
-          </div>
+      <div>
+        <div
+          style={{
+            backgroundColor: "red",
+
+            // height: "100px",
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "5%",
+          }}
+        >
+          <button onClick={onRentalAgreement}>Rental Agreement</button>
+          {rentalOpen && (
+            <div>
+              <div>
+                <span>Name 1</span>
+                <input/>
+              </div>
+              <div>
+                <input/>
+              </div>
+              <div>
+                <input/>
+              </div>
+              <div>
+                <input/>
+              </div>
+            </div>
+          )}
+
+          <button>Loan Agreement</button>
+          <button>Employment Agreement</button>
+          <button>Business Agreement</button>
         </div>
       </div>
     </div>
