@@ -16,7 +16,7 @@ const DocSummary = () => {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/analyse",
+        "https://newbackendlegal.onrender.com/analyse",
         formData
       );
       // setFormData({
@@ -65,10 +65,11 @@ const DocSummary = () => {
             >
               Generate Summary
             </button>
-            <div>{summary && summary}</div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center pb-5">
+          <div>{summary && summary}</div>
+
           {/* <textarea
         className="  w-full max-w-md h-[250px] p-2 border border-gray-300 rounded mb-[40px]"
       >

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Banner from "./Banner";
+import RentalAgreement from "./RentalAgreement";
 
 const FormKeys = {
   date: "date",
@@ -12,25 +13,22 @@ const FormKeys = {
 };
 
 const CreateDoc = () => {
-  const [file, setFile] = useState(null);
-  const [summary, setSummary] = useState("");
   const [rentalOpen, setRentalOpen] = useState(false);
-  const [myTemplate, setMyTemplate] = useState(false);
-  const [formData, setFormData] = useState({});
+  const [rentalTemplate, setRentalTemplate] = useState(false);
+  const [rentalData, setRentalData] = useState({});
 
   const onRentalAgreement = () => {
     setRentalOpen(true);
   };
 
   const setData = (key, val) => {
-    const tempData = { ...formData };
+    const tempData = { ...rentalData };
     tempData[key] = val;
-    setFormData(tempData);
+    setRentalData(tempData);
   };
   const handleSubmit = () => {
-    console.log(formData);
     setRentalOpen(false);
-    setMyTemplate(true);
+    setRentalTemplate(true);
   };
 
   return (
@@ -40,8 +38,6 @@ const CreateDoc = () => {
         <div
           style={{
             backgroundColor: "red",
-
-            // height: "100px",
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
@@ -54,7 +50,7 @@ const CreateDoc = () => {
               <div>
                 <span>Date</span>
                 <input
-                  value={formData[FormKeys.date]}
+                  value={rentalData[FormKeys.date]}
                   onChange={(e) => {
                     setData([FormKeys.date], e.target.value);
                   }}
@@ -63,7 +59,7 @@ const CreateDoc = () => {
               <div>
                 <span>LandLord Name</span>
                 <input
-                  value={formData[FormKeys.landlordName]}
+                  value={rentalData[FormKeys.landlordName]}
                   onChange={(e) => {
                     setData([FormKeys.landlordName], e.target.value);
                   }}
@@ -72,7 +68,7 @@ const CreateDoc = () => {
               <div>
                 <span>Landlord Address</span>
                 <input
-                  value={formData[FormKeys.landlordAddress]}
+                  value={rentalData[FormKeys.landlordAddress]}
                   onChange={(e) => {
                     setData([FormKeys.landlordAddress], e.target.value);
                   }}
@@ -81,7 +77,7 @@ const CreateDoc = () => {
               <div>
                 <span>Tenant Name</span>
                 <input
-                  value={formData[FormKeys.tenantName]}
+                  value={rentalData[FormKeys.tenantName]}
                   onChange={(e) => {
                     setData([FormKeys.tenantName], e.target.value);
                   }}
@@ -90,7 +86,7 @@ const CreateDoc = () => {
               <div>
                 <span>Tenant Address</span>
                 <input
-                  value={formData[FormKeys.tenantAddress]}
+                  value={rentalData[FormKeys.tenantAddress]}
                   onChange={(e) => {
                     setData([FormKeys.tenantAddress], e.target.value);
                   }}
@@ -99,7 +95,7 @@ const CreateDoc = () => {
               <div>
                 <span>Rent</span>
                 <input
-                  value={formData[FormKeys.rent]}
+                  value={rentalData[FormKeys.rent]}
                   onChange={(e) => {
                     setData([FormKeys.rent], e.target.value);
                   }}
@@ -110,31 +106,8 @@ const CreateDoc = () => {
             </div>
           )}
 
-          {myTemplate && formData && (
-            <div>
-              This Rental Agreement is made and entered into on {formData?.date}
-              , by and between: Landlord:
-              {formData?.landlordName}, residing at
-              {formData?.landlordAddress} and Tenant: {formData?.tenantName},
-              residing at {formData?.tenantAddress}Property: The Landlord agrees to rent to
-              the Tenant the premises located at {formData?.landlordAddress} for
-              residential purposes only. Term: The term of this Agreement shall
-              begin on {formData?.date} and shall continue on a month-to-month
-              basis until terminated as provided herein. Rent: The Tenant shall
-              pay to the Landlord a monthly rent of {formData?.rent} to be paid
-              on the 5th of each month. Maintenance: The Landlord shall be
-              responsible for maintaining the Property in a habitable condition
-              and shall make any necessary repairs promptly. Termination: Either
-              party may terminate this Agreement upon giving written notice to
-              the other party at least 30 days prior to the intended date of
-              termination. Governing Law: This Agreement shall be governed by
-              and construed in accordance with the laws of India. Entire
-              Agreement: This Agreement constitutes the entire understanding and
-              agreement between the parties with respect to the subject matter
-              hereof and supersedes all prior agreements and understandings. IN
-              WITNESS WHEREOF, the parties hereto have executed this Agreement
-              as of the date first above written.
-            </div>
+          {rentalTemplate && rentalData && (
+            <RentalAgreement rentalAgreementData={rentalData} />
           )}
 
           <button>Loan Agreement</button>
