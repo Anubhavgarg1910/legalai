@@ -13,12 +13,26 @@ const FormKeys = {
 };
 
 const CreateDoc = () => {
-  const [rentalOpen, setRentalOpen] = useState(false);
-  const [rentalTemplate, setRentalTemplate] = useState(false);
+  const [openStates, setOpenStates] = useState({
+    rentalOpen: false,
+    loanOpen: false,
+    businessOpen: false,
+    employmentOpen: false,
+  });
+  const [openTemplate, setOpenTemplate] = useState({
+    rentalForm: false,
+    loanForm: false,
+    businessForm: false,
+    employmentForm: false,
+  });
+
   const [rentalData, setRentalData] = useState({});
 
   const onRentalAgreement = () => {
-    setRentalOpen(true);
+    setOpenStates((prevState) => ({
+      ...prevState,
+      rentalOpen: true,
+    }));
   };
 
   const setData = (key, val) => {
@@ -27,8 +41,21 @@ const CreateDoc = () => {
     setRentalData(tempData);
   };
   const handleSubmit = () => {
-    setRentalOpen(false);
-    setRentalTemplate(true);
+    if (Object.keys(rentalData).length == 0) {
+      setOpenStates((prevState) => ({
+        ...prevState,
+        rentalOpen: true,
+      }));
+    } else {
+      setOpenStates((prevState) => ({
+        ...prevState,
+        rentalOpen: false,
+      }));
+    }
+    setOpenTemplate((prevState) => ({
+      ...prevState,
+      rentalForm: true,
+    }));
   };
 
   return (
@@ -45,7 +72,7 @@ const CreateDoc = () => {
           }}
         >
           <button onClick={onRentalAgreement}>Rental Agreement</button>
-          {rentalOpen && (
+          {openStates?.rentalOpen && (
             <div>
               <div>
                 <span>Date</span>
@@ -106,7 +133,7 @@ const CreateDoc = () => {
             </div>
           )}
 
-          {rentalTemplate && rentalData && (
+          {openTemplate?.rentalForm && rentalData && (
             <RentalAgreement rentalAgreementData={rentalData} />
           )}
 
