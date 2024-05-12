@@ -56,17 +56,17 @@ const CreateDoc = () => {
 
           <div className=" flex flex-row justify-center mt-[200px]">
           {rentalOpen && (
-            <div className="  bg-primary w-full p-[74px] rounded-sm  ">
-              <div>
+            <div className="  bg-primary p-[74px] rounded-sm w-[700px] ">
+              <div className="py-3">
                
-                <input className="form-control" placeholder="Date"
+                <input className="form-control " placeholder="Date"
                   value={formData[FormKeys.date]}
                   onChange={(e) => {
                     setData([FormKeys.date], e.target.value);
                   }}
                 />
               </div>
-              <div>
+              <div className="py-3">
                 
                 <input className="form-control"
                 placeholder="LandLord Name"
@@ -76,36 +76,36 @@ const CreateDoc = () => {
                   }}
                 />
               </div>
-              <div>
+              <div className="py-3">
                 
-                <input className="form-control" placeholder="Landlord Address"
+                <input className="form-control p-2" placeholder="Landlord Address"
                   value={formData[FormKeys.landlordAddress]}
                   onChange={(e) => {
                     setData([FormKeys.landlordAddress], e.target.value);
                   }}
                 />
               </div>
-              <div>
+              <div className="py-3">
                 
-                <input className="form-control" placeholder="Tenant Name"
+                <input className="form-control p-2" placeholder="Tenant Name"
                   value={formData[FormKeys.tenantName]}
                   onChange={(e) => {
                     setData([FormKeys.tenantName], e.target.value);
                   }}
                 />
               </div>
-              <div>
+              <div className="py-3">
                 
-                <input className="form-control" placeholder="Tenant Address"
+                <input className="form-control " placeholder="Tenant Address"
                   value={formData[FormKeys.tenantAddress]}
                   onChange={(e) => {
                     setData([FormKeys.tenantAddress], e.target.value);
                   }}
                 />
               </div>
-              <div>
+              <div className="py-3">
                 
-                <input className="form-control" placeholder="Rent"
+                <input className="form-control " placeholder="Rent"
                   value={formData[FormKeys.rent]}
                   onChange={(e) => {
                     setData([FormKeys.rent], e.target.value);
@@ -113,7 +113,7 @@ const CreateDoc = () => {
                 />
               </div>
 
-              <button className="btn bg-accent hover:bg-accent-hover transition-all" onClick={handleSubmit}>Submit</button>
+              <button className="btn bg-accent hover:bg-accent-hover transition-all py-6 " onClick={handleSubmit}>Submit</button>
             </div>
           )}
           {myTemplate && formData && (
