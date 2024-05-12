@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useRef,useEffect } from "react";
+import Footer from "../components/Footer"
 import Banner from "./Banner";
 import rentalImg from "../assets/img/rental image.jpg"
+
+
+
 
 const FormKeys = {
   date: "date",
@@ -18,10 +22,22 @@ const CreateDoc = () => {
   const [rentalOpen, setRentalOpen] = useState(false);
   const [myTemplate, setMyTemplate] = useState(false);
   const [formData, setFormData] = useState({});
+  const scrollToForm = useRef(null);
+
+  useEffect(() => {
+    if (rentalOpen && scrollToForm.current) {
+      scrollToForm.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [rentalOpen]); 
 
   const onRentalAgreement = () => {
+    
+
     setRentalOpen(true);
+    setMyTemplate(false);
+    
   };
+
 
   const setData = (key, val) => {
     const tempData = { ...formData };
@@ -33,30 +49,30 @@ const CreateDoc = () => {
     setRentalOpen(false);
     setMyTemplate(true);
   };
-
+  
   return (
    
     <div>
       <Banner showAppointment={false} />
       <div>
-        <div className="flex flex-col items-center mt-[100px]  mb-16 last:mb-0 lg:mb-0 justify-center ">
-          <button className='text-2xl mb-2 font-primary font-bold ' onClick={onRentalAgreement}>Rental Agreement</button>
+        <div className="flex flex-col items-center mt-[150px]  mb-8 last:mb-0 lg:mb-0 justify-center ">
+          <button className='text-2xl mb-2 font-primary font-bold text-primary hover:text-accent-hover ' onClick={onRentalAgreement}>Rental Agreement</button>
           <p className=' max-w-[332px] lg:max-w-[350px] text-center'>Make home,shop etc. rental agreement in seconds by just filling a form</p>
 
-          <button className='text-2xl mb-[20px] font-primary font-bold mt-[50px]'>Loan Agreement</button>
+          <button className='text-2xl mb-[20px] font-primary font-bold mt-[50px]  text-primary hover:text-accent-hover '>Loan Agreement</button>
           <p className=' max-w-[332px] lg:max-w-[350px] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum</p>
 
-          <button className='text-2xl mb-2 font-primary font-bold mt-[50px]'>Employment Agreement</button>
+          <button className='text-2xl mb-2 font-primary font-bold mt-[50px]  text-primary hover:text-accent-hover '>Employment Agreement</button>
            <p className=' max-w-[332px] lg:max-w-[350px] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum</p>
            
-          <button className='text-2xl mb-2 font-primary font-bold mt-[50px]'>Business Agreement</button>
+          <button className='text-2xl font-primary font-bold mt-[50px]  text-primary hover:text-accent-hover '>Business Agreement</button>
           <p className=' max-w-[332px] lg:max-w-[350px] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum</p>
           </div>
 
 
-          <div className=" flex flex-row justify-center mt-[200px]">
+          <div className=" flex flex-row justify-center mt-[200px] mb-[100px]">
           {rentalOpen && (
-            <div className="  bg-primary p-[74px] rounded-sm w-[700px] ">
+            <div ref={scrollToForm} className="  bg-primary p-[74px] rounded-sm w-[700px] ">
               <div className="py-3">
                
                 <input className="form-control " placeholder="Date"
@@ -112,12 +128,13 @@ const CreateDoc = () => {
                   }}
                 />
               </div>
-
-              <button className="btn bg-accent hover:bg-accent-hover transition-all py-6 " onClick={handleSubmit}>Submit</button>
+              <div className=" pt-6">
+              <button className="btn bg-accent hover:bg-accent-hover transition-all  " onClick={handleSubmit}>Submit</button>
+              </div>
             </div>
           )}
           {myTemplate && formData && (
-            <div className="">
+            <div className="w-[900px]">
               This Rental Agreement is made and entered into on {formData?.date}
               , by and between: Landlord:
               {formData?.landlordName}, residing at
@@ -145,6 +162,7 @@ const CreateDoc = () => {
           </div>
         
       </div>
+      <Footer/>
     </div>
   );
 };

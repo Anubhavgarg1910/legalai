@@ -46,7 +46,7 @@ const DocSummary = () => {
       "
       >
         <div className="flex flex-col items-center justify-center h-full mb-8 pt-[100px] ">
-          <div className="flex mb-4 gap-x-[60px] p-5 ">
+          <div className="flex flex-col mb-4 gap-x-[60px] p-5 w-full justify-center items-center">
             {/* <input
             type="file"
             onChange={handleFileChange}
@@ -55,13 +55,13 @@ const DocSummary = () => {
             <textarea
               value={formData.text}
               onChange={handleInputChange}
-              className="  w-full max-w-md h-[250px] p-2 border border-gray-300 rounded mb-[40px]"
+              className="  w-[1100px] h-[150px] p-2 border rounded-md border-gray-300 border-spacing-x-10  mb-[40px]"
             ></textarea>
             <button
               // onClick={handleSubmit}
               onClick={handleSubmit}
               disabled={isDisabled}
-              className="btn bg-primary hover:bg-primary-hover transition-all"
+              className="btn bg-primary hover:bg-primary-hover  rounded-md transition-all w-[300px]"
             >
               Generate Summary
             </button>
