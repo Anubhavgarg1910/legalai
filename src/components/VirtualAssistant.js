@@ -7,20 +7,19 @@ const VirtualAssistant = () => {
   const [isDisabled, setIsDisabled] = useState(false);
 
   const [formData, setFormData] = useState({
-    text: "",
+    query: "",
   });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const response = await axios.post(
-        "https://newbackendlegal.onrender.com/assistant",
+        "https://assitant-ai.onrender.com/query",
         formData
       );
       // setIsDisabled(true);
-      console.log("Response from Flask API:", response.data);
-      setSummary(response?.data?.summary);
+      console.log("Response from Flask API:", response?.data?.response);
+      setSummary(response?.data?.response);
     } catch (error) {
       console.error("Error sending data to Flask API:", error);
     }
@@ -28,7 +27,7 @@ const VirtualAssistant = () => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({
-      text: value,
+      query: value,
     });
   };
   console.log({ summary });
