@@ -1,7 +1,7 @@
 import React, { useState,useRef,useEffect } from "react";
 import Footer from "../components/Footer"
 import Banner from "./Banner";
-import rentalImg from "../assets/img/rental image.jpg"
+
 
 
 
@@ -65,14 +65,14 @@ const CreateDoc = () => {
           <button className='text-2xl mb-2 font-primary font-bold mt-[50px]  text-primary hover:text-accent-hover '>Employment Agreement</button>
            <p className=' max-w-[332px] lg:max-w-[350px] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum</p>
            
-          <button className='text-2xl font-primary font-bold mt-[50px]  text-primary hover:text-accent-hover '>Business Agreement</button>
+          <button  ref={scrollToForm} className='text-2xl font-primary font-bold mt-[50px]  text-primary hover:text-accent-hover '>Business Agreement</button>
           <p className=' max-w-[332px] lg:max-w-[350px] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum</p>
           </div>
 
 
-          <div className=" flex flex-row justify-center mt-[200px] mb-[100px]">
+          <div  className=" flex flex-row justify-center mt-[200px] mb-[100px]">
           {rentalOpen && (
-            <div ref={scrollToForm} className="  bg-primary p-[74px] rounded-sm w-[700px] ">
+            <div  className="  bg-primary p-[74px] rounded-sm w-[700px] ">
               <div className="py-3">
                
                 <input className="form-control " placeholder="Date"
@@ -134,7 +134,7 @@ const CreateDoc = () => {
             </div>
           )}
           {myTemplate && formData && (
-            <div className="w-[900px]">
+            <div className="w-[900px] p-6 border-double border-4 border-black">
               This Rental Agreement is made and entered into on {formData?.date}
               , by and between: Landlord:
               {formData?.landlordName}, residing at
