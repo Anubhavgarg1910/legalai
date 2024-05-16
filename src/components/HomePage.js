@@ -5,7 +5,6 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import BackToTopBtn from "./BackToTopBtn";
-import MyFormComponent from "./MyFormComponent";
 
 const HomePage = () => {
   return (
@@ -16,7 +15,6 @@ const HomePage = () => {
       <Contact />
       <Footer />
       <BackToTopBtn />
-      <MyFormComponent />
     </div>
   );
 };
