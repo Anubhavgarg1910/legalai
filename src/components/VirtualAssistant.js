@@ -35,17 +35,13 @@ const VirtualAssistant = () => {
   return (
     <div>
       <Banner showAppointment={false} />
-      <div
+      {/* <div
         className="lg:h-full lg:max-h-800 
     "
       >
         <div className="flex flex-col items-center justify-center h-full mb-8 pt-[100px] ">
           <div className="flex mb-4 gap-x-[60px] p-5 ">
-            {/* <input
-          type="file"
-          onChange={handleFileChange}
-          className="form-control"
-        /> */}
+           
             <textarea
               value={formData.text}
               onChange={handleInputChange}
@@ -64,12 +60,38 @@ const VirtualAssistant = () => {
         <div className="flex flex-col items-center justify-center pb-5">
           <div>{summary && summary}</div>
 
-          {/* <textarea
-      className="  w-full max-w-md h-[250px] p-2 border border-gray-300 rounded mb-[40px]"
-    >
-      {summary && <div>{summary}</div>}
-    </textarea> */}
         </div>
+      </div> */}
+      <div
+        className="lg:h-full lg:max-h-800 
+      "
+      >
+        <div className="flex flex-col items-center justify-center h-full mb-8 pt-[60px] ">
+          <div className="flex flex-col mb-2 gap-x-[60px] p-5 w-full justify-center items-center">
+            <div className="text-2xl mb-1 font-primary font-bold text-center">
+              You can ask any question here
+            </div>
+            <textarea
+              value={formData.text}
+              onChange={handleInputChange}
+              className="  w-[500px] h-[120px] p-2 border rounded-md border-gray-300 border-spacing-x-10  mb-[40px]"
+            ></textarea>
+            <button
+              onClick={handleSubmit}
+              disabled={isDisabled}
+              className="btn bg-primary hover:bg-primary-hover  rounded-md transition-all w-[200px]"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+        {summary && (
+          <div className="flex flex-col items-center justify-center pb-5 mb-32">
+            <div className=" w-[500px] min-h-[150px] rounded-md  p-4 border-2 border-green-200">
+              {summary}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
