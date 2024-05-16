@@ -14,6 +14,7 @@ const CreateDoc = () => {
   const [businessOpen, setBusinessOpen] = useState(false);
   const [empOpen, setEmpOpen] = useState(false);
   const [myTemplate, setMyTemplate] = useState(false);
+  const [myTemplate2, setMyTemplate2] = useState(false);
   const [formData, setFormData] = useState({});
   const [loanData, setLoanData] = useState({});
   const [businessData, setBusinessData] = useState({});
@@ -71,8 +72,7 @@ const CreateDoc = () => {
   const handleSubmit2 = () => {
     setLoanOpen(false);
     console.log(loanData);
-
-    // setMyTemplate(true);
+    setMyTemplate2(true);
   };
 
   return (
@@ -329,7 +329,7 @@ const CreateDoc = () => {
               </div>
             </div>
           )}
-          {myTemplate && loanData && (
+          {myTemplate2 && loanData && (
             <div className="w-[900px] p-6 border-double border-4 border-black">
               <LoanAgreement loanAgreementData={loanData} />
             </div>
