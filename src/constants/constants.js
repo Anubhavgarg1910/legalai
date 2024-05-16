@@ -19,10 +19,7 @@ export const LoanKeys = {
   endDate: "endDate",
   installmentAmount: "installmentAmount",
   firstInstallmentDate: "firstInstallmentDate",
-  tenantName: "tenantName",
-  tenantAddress: "tenantAddress",
-  landlordAddress: "landlordAddress",
-  rent: "rent",
+ 
 };
 export const BusinessKeys = {
   date: "date",

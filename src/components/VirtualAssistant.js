@@ -35,37 +35,7 @@ const VirtualAssistant = () => {
   return (
     <div>
       <Banner showAppointment={false} />
-      {/* <div
-        className="lg:h-full lg:max-h-800 
-    "
-      >
-        <div className="flex flex-col items-center justify-center h-full mb-8 pt-[100px] ">
-          <div className="flex mb-4 gap-x-[60px] p-5 ">
-           
-            <textarea
-              value={formData.text}
-              onChange={handleInputChange}
-              className="  w-full max-w-md h-[250px] p-2 border border-gray-300 rounded mb-[40px]"
-            ></textarea>
-            <button
-              // onClick={handleSubmit}
-              onClick={handleSubmit}
-              disabled={isDisabled}
-              className="btn bg-primary hover:bg-primary-hover transition-all"
-            >
-              Generate Summary
-            </button>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center pb-5">
-          <div>{summary && summary}</div>
-
-        </div>
-      </div> */}
-      <div
-        className="lg:h-full lg:max-h-800 
-      "
-      >
+      <div className="lg:h-full lg:max-h-800">
         <div className="flex flex-col items-center justify-center h-full mb-8 pt-[60px] ">
           <div className="flex flex-col mb-2 gap-x-[60px] p-5 w-full justify-center items-center">
             <div className="text-2xl mb-1 font-primary font-bold text-center">
