@@ -7,6 +7,8 @@ import { LoanKeys } from "../constants/constants";
 import { BusinessKeys } from "../constants/constants";
 import { EmpKeys } from "../constants/constants";
 import LoanAgreement from "./LoanAgreement";
+import EmployementContract from "./EmployementContract";
+import BusinessContract from "./BusinessContract";
 
 const CreateDoc = () => {
   const [rentalOpen, setRentalOpen] = useState(false);
@@ -15,6 +17,8 @@ const CreateDoc = () => {
   const [empOpen, setEmpOpen] = useState(false);
   const [myTemplate, setMyTemplate] = useState(false);
   const [myTemplate2, setMyTemplate2] = useState(false);
+  const [myTemplate3, setMyTemplate3] = useState(false);
+  const [myTemplate4, setMyTemplate4] = useState(false);
   const [formData, setFormData] = useState({});
   const [loanData, setLoanData] = useState({});
   const [businessData, setBusinessData] = useState({});
@@ -65,14 +69,20 @@ const CreateDoc = () => {
     setEmpData(tempData);
   };
   const handleSubmit = () => {
-    console.log(formData);
     setRentalOpen(false);
     setMyTemplate(true);
   };
   const handleSubmit2 = () => {
     setLoanOpen(false);
-    console.log(loanData);
     setMyTemplate2(true);
+  };
+  const handleSubmit3 = () => {
+    setEmpOpen(false);
+    setMyTemplate3(true);
+  };
+  const handleSubmit4 = () => {
+    setBusinessOpen(false);
+    setMyTemplate4(true);
   };
 
   return (
@@ -334,166 +344,242 @@ const CreateDoc = () => {
               <LoanAgreement loanAgreementData={loanData} />
             </div>
           )}
-        </div>
-        <div className=" flex flex-row justify-center mt-[200px] mb-[100px]">
-          {rentalOpen && (
+
+          {empOpen && (
             <div className="  bg-primary p-[74px] w-[700px] rounded-3xl">
               <div className="py-3">
                 <input
                   className="form-control"
                   placeholder="Date"
-                  value={formData[FormKeys.date]}
+                  value={empData[EmpKeys.date]}
                   onChange={(e) => {
-                    setData([FormKeys.date], e.target.value);
+                    setEData([EmpKeys.date], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
                   className="form-control"
-                  placeholder="LandLord Name"
-                  value={formData[FormKeys.landlordName]}
+                  placeholder="Employer Name"
+                  value={empData[EmpKeys.employerName]}
                   onChange={(e) => {
-                    setData([FormKeys.landlordName], e.target.value);
+                    setEData([EmpKeys.employerName], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
                   className="form-control p-2"
-                  placeholder="Landlord Address"
-                  value={formData[FormKeys.landlordAddress]}
+                  placeholder="Employer Address"
+                  value={empData[EmpKeys.employeeAddress]}
                   onChange={(e) => {
-                    setData([FormKeys.landlordAddress], e.target.value);
+                    setEData([EmpKeys.employerAddress], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
                   className="form-control p-2"
-                  placeholder="Tenant Name"
-                  value={formData[FormKeys.tenantName]}
+                  placeholder="Employee Name"
+                  value={empData[EmpKeys.employeeName]}
                   onChange={(e) => {
-                    setData([FormKeys.tenantName], e.target.value);
+                    setEData([EmpKeys.employeeName], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
-                  placeholder="Tenant Address"
-                  value={formData[FormKeys.tenantAddress]}
+                  className="form-control p-2"
+                  placeholder="Employee Address"
+                  value={empData[EmpKeys.employeeAddress]}
                   onChange={(e) => {
-                    setData([FormKeys.tenantAddress], e.target.value);
+                    setEData([EmpKeys.employeeAddress], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
-                  placeholder="Rent"
-                  value={formData[FormKeys.rent]}
+                  className="form-control p-2"
+                  placeholder="Start Date"
+                  value={empData[EmpKeys.startDate]}
                   onChange={(e) => {
-                    setData([FormKeys.rent], e.target.value);
+                    setEData([EmpKeys.startDate], e.target.value);
                   }}
                 />
               </div>
+              <div className="py-3">
+                <input
+                  className="form-control p-2"
+                  placeholder="End Date"
+                  value={empData[EmpKeys.endDate]}
+                  onChange={(e) => {
+                    setEData([EmpKeys.endDate], e.target.value);
+                  }}
+                />
+              </div>
+              <div className="py-3">
+                <input
+                  className="form-control p-2"
+                  placeholder="Payment Frequency"
+                  value={empData[EmpKeys.paymentFreq]}
+                  onChange={(e) => {
+                    setEData([EmpKeys.paymentFreq], e.target.value);
+                  }}
+                />
+              </div>
+              <div className="py-3">
+                <input
+                  className="form-control p-2"
+                  placeholder="Employee Benefits"
+                  value={empData[EmpKeys.empBenefits]}
+                  onChange={(e) => {
+                    setEData([EmpKeys.empBenefits], e.target.value);
+                  }}
+                />
+              </div>
+              <div className="py-3">
+                <input
+                  className="form-control p-2"
+                  placeholder="Job Title"
+                  value={empData[EmpKeys.jobTitle]}
+                  onChange={(e) => {
+                    setEData([EmpKeys.jobTitle], e.target.value);
+                  }}
+                />
+              </div>
+
               <div className=" pt-6">
                 <button
                   className="btn bg-accent hover:bg-accent-hover transition-all  "
-                  onClick={handleSubmit}
+                  onClick={handleSubmit3}
                 >
                   Submit
                 </button>
               </div>
             </div>
           )}
-          {myTemplate && formData && (
+          {myTemplate3 && empData && (
             <div className="w-[900px] p-6 border-double border-4 border-black">
-              <RentalAgreement rentalAgreementData={formData} />
+              <EmployementContract employementContractData={empData} />
             </div>
           )}
-          {}
-        </div>
-        <div className=" flex flex-row justify-center mt-[200px] mb-[100px]">
-          {rentalOpen && (
+          {businessOpen && (
             <div className="  bg-primary p-[74px] w-[700px] rounded-3xl">
               <div className="py-3">
                 <input
                   className="form-control"
                   placeholder="Date"
-                  value={formData[FormKeys.date]}
+                  value={businessData[BusinessKeys.date]}
                   onChange={(e) => {
-                    setData([FormKeys.date], e.target.value);
+                    setBData([BusinessKeys.date], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
                   className="form-control"
-                  placeholder="LandLord Name"
-                  value={formData[FormKeys.landlordName]}
+                  placeholder="Party A"
+                  value={businessData[BusinessKeys.partyA]}
                   onChange={(e) => {
-                    setData([FormKeys.landlordName], e.target.value);
+                    setBData([BusinessKeys.partyA], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
-                  className="form-control p-2"
-                  placeholder="Landlord Address"
-                  value={formData[FormKeys.landlordAddress]}
+                  className="form-control"
+                  placeholder="Business Type"
+                  value={businessData[BusinessKeys.businessType]}
                   onChange={(e) => {
-                    setData([FormKeys.landlordAddress], e.target.value);
+                    setBData([BusinessKeys.businessType], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
-                  className="form-control p-2"
-                  placeholder="Tenant Name"
-                  value={formData[FormKeys.tenantName]}
+                  className="form-control"
+                  placeholder="Address Party A"
+                  value={businessData[BusinessKeys.addressPartyA]}
                   onChange={(e) => {
-                    setData([FormKeys.tenantName], e.target.value);
+                    setBData([BusinessKeys.addressPartyA], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
-                  placeholder="Tenant Address"
-                  value={formData[FormKeys.tenantAddress]}
+                  className="form-control"
+                  placeholder="Party B"
+                  value={businessData[BusinessKeys.partyB]}
                   onChange={(e) => {
-                    setData([FormKeys.tenantAddress], e.target.value);
+                    setBData([BusinessKeys.partyB], e.target.value);
                   }}
                 />
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
-                  placeholder="Rent"
-                  value={formData[FormKeys.rent]}
+                  className="form-control"
+                  placeholder="Address Party B"
+                  value={businessData[BusinessKeys.addressPartyB]}
                   onChange={(e) => {
-                    setData([FormKeys.rent], e.target.value);
+                    setBData([BusinessKeys.addressPartyB], e.target.value);
+                  }}
+                />
+              </div>
+              <div className="py-3">
+                <input
+                  className="form-control"
+                  placeholder="Business Description"
+                  value={businessData[BusinessKeys.businessDesc]}
+                  onChange={(e) => {
+                    setBData([BusinessKeys.businessDesc], e.target.value);
+                  }}
+                />
+              </div>
+              <div className="py-3">
+                <input
+                  className="form-control"
+                  placeholder="Payment"
+                  value={businessData[BusinessKeys.payment]}
+                  onChange={(e) => {
+                    setBData([BusinessKeys.payment], e.target.value);
+                  }}
+                />
+              </div>
+              <div className="py-3">
+                <input
+                  className="form-control"
+                  placeholder="Ending Date"
+                  value={businessData[BusinessKeys.endingDate]}
+                  onChange={(e) => {
+                    setBData([BusinessKeys.endingDate], e.target.value);
+                  }}
+                />
+              </div>
+              <div className="py-3">
+                <input
+                  className="form-control"
+                  placeholder="Due Date"
+                  value={businessData[BusinessKeys.dueDate]}
+                  onChange={(e) => {
+                    setBData([BusinessKeys.dueDate], e.target.value);
                   }}
                 />
               </div>
               <div className=" pt-6">
                 <button
                   className="btn bg-accent hover:bg-accent-hover transition-all  "
-                  onClick={handleSubmit}
+                  onClick={handleSubmit4}
                 >
                   Submit
                 </button>
               </div>
             </div>
           )}
-          {myTemplate && formData && (
+          {myTemplate4 && businessData && (
             <div className="w-[900px] p-6 border-double border-4 border-black">
-              <RentalAgreement rentalAgreementData={formData} />
+              <BusinessContract businessContractData={businessData} />
             </div>
           )}
-          {}
         </div>
       </div>
       <Footer />
