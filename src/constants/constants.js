@@ -19,7 +19,19 @@ export const LoanKeys = {
   endDate: "endDate",
   installmentAmount: "installmentAmount",
   firstInstallmentDate: "firstInstallmentDate",
- 
+};
+
+export const EmpKeys = {
+  date: "date",
+  employerName: "employerName",
+  employerAddress: "employerAddress",
+  employeeName: "employeeName",
+  employeeAddress: "employeeAddress",
+  startDate: "startDate",
+  endDate: "endDate",
+  paymentFreq: "paymentFreq",
+  empBenefits: "empBenefits",
+  jobTitle: "jobTitle",
 };
 export const BusinessKeys = {
   date: "date",
@@ -32,18 +44,4 @@ export const BusinessKeys = {
   payment: "payment",
   endingDate: "endingDate",
   dueDate: "dueDate",
-  landlordAddress: "landlordAddress",
-  rent: "rent",
-};
-export const EmpKeys = {
-  date: "date",
-  employerName: "employerName",
-  employerAddress: "employerAddress",
-  employeeName: "employeeName",
-  employeeAddress: "employeeAddress",
-  startDate: "startDate",
-  endDate: "endDate",
-  paymentFreq: "paymentFreq",
-  empBenefits: "empBenefits",
-  jobTitle: "jobTitle",
 };
