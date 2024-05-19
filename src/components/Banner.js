@@ -21,8 +21,8 @@ const Banner = ({ showAppointment }) => {
             Your Problem <br /> <span className=" text-">Our Goal.</span>
           </h1>
           <p className="max-w-sm mx-auto lg:mx-0 mb-[50px] lg:max-w-[540px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            rutrum sapien in lectus semper, eget vestibulum augue feugiat.
+            Legal I uses emerging technologies like machine learning and Artificial Intelligence 
+            to provide better experience to the users.
           </p>
           {/* Appointment */}
           <div className="lg:absolute mx-auto max-w-[445px] lg:mx-0">

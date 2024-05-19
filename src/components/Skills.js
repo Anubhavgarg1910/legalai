@@ -7,10 +7,9 @@ const Skills = () => {
     <div className='container mx-auto text-center'>
         <h2 className='text-5xl font primary font-extrabold mb-4'>What we do</h2>
         <p className='max-w-[540px] mx-auto px-6 lg:px-0 mb-[60px]'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-         sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-           ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        We provide automated legal advice and assistance, leveraging artificial
+         intelligence to analyze legal documents, answer queries,
+          and offer guidance on legal matters efficiently and accurately for users.
         </p>
         {/*skills grid */}
         <div>

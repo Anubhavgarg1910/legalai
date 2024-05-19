@@ -50,19 +50,19 @@ export const navigation = [
 // testimonials data
 export const testimonials = [
   {
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem rem ad consequuntur similique sequi illum dolorum omnis inventore labore odio!",
+    text: "The legal AI advisor simplified my contract review process, saving me time and money. Highly recommended!",
     name: "Jane Cooper",
     image: ProfilePhoto1,
     position: "Web Developer",
   },
   {
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem rem ad consequuntur similique sequi illum dolorum omnis inventore labore odio!",
+    text: "Exceptional service! The AI provided clear, concise legal advice quickly. A game-changer for my business.",
     name: "Theresa Webb",
     image: ProfilePhoto2,
     position: "Web Designer",
   },
   {
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem rem ad consequuntur similique sequi illum dolorum omnis inventore labore odio!",
+    text: "The document summarization feature is fantastic. It made understanding complex legal terms effortless.",
     name: "Kathryn Murphy",
     image: ProfilePhoto3,
     position: "UI/UX Designer",
@@ -75,19 +75,19 @@ export const skills = [
     icon: Skill1,
     title: "Doc Summarization",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+      "It condenses legal documents into concise summaries, highlighting key points and essential information.",
   },
   {
     icon: Skill2,
     title: "Create Document",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+      "We generates customized legal documents using AI, based on user inputs and legal templates.",
   },
   {
     icon: Skill3,
     title: "Assistant",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+      "It provides AI-driven advice and support for legal queries, document analysis, and case management.",
   },
   // {
   //   icon: Skill4,
