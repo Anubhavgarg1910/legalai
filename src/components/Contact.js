@@ -6,9 +6,9 @@ const Contact = () => {
     <div className=' container mx-auto text-center'>
         <h2 className=' text-5xl font-primary font-extrabold mb-4'>Contact us</h2>
         <p className=' max-w-[540px] mx-auto px-6 lg:px-0 mb-[64px]'>
-        Lorem ipsum dolo lauda sit amet, consectetur adipiscing elit,
-         sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis bhund ostrud exercitation
+        For inquiries or support, please contact us at legalAI@gmail.com . 
+        Our team is available to assist with legal advice, document analysis,
+         and any other AI-driven legal services you may need.
         </p>
         {/*form*/}
         <form className=' px-8 lg:px-0 max-w-[600px] mx-auto flex flex-col space-y-6 mb-[46px]'>
