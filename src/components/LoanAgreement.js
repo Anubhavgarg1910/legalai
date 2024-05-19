@@ -3,17 +3,20 @@ import React from "react";
 const LoanAgreement = ({ loanAgreementData }) => {
   return (
     <div>
-      This Loan Agreement is made and entered into on {loanAgreementData?.date},
-      by and between: Lender: {loanAgreementData?.lenderName} Address:{" "}
-      {loanAgreementData?.lenderAddress} and Borrower:
-      {loanAgreementData?.borrowerName} Address:{" "}
-      {loanAgreementData?.borrowerAddress} Loan Amount: The Lender agrees to
-      lend the Borrower the sum of ₹ {loanAgreementData?.loanAmount} ("Loan").
-      Interest Rate: The Loan shall accrue interest at the rate of{" "}
-      {loanAgreementData?.interestRate} % per annum, calculated on the
-      outstanding principal balance. Term: The term of the Loan shall commence
-      on {loanAgreementData?.startDate} and shall continue for a period of 12
-      months, beginning on {loanAgreementData?.startDate} and ending on
+      This Loan Agreement is made and entered into on {loanAgreementData?.date}{" "}
+      <br />
+      by and between: <br />
+      Lender: {loanAgreementData?.lenderName}, residing at{" "}
+      {loanAgreementData?.lenderAddress} <br />
+      Borrower: {loanAgreementData?.borrowerName} residing at{" "}
+      {loanAgreementData?.borrowerAddress}
+      <br /> Loan Amount: The Lender agrees to lend the Borrower the sum of ₹{" "}
+      {loanAgreementData?.loanAmount} ("Loan"). Interest Rate: The Loan shall
+      accrue interest at the rate of {loanAgreementData?.interestRate} % per
+      annum, calculated on the outstanding principal balance. Term: The term of
+      the Loan shall commence on {loanAgreementData?.startDate} and shall
+      continue for a period of 12 months, beginning on{" "}
+      {loanAgreementData?.startDate} and ending on
       {loanAgreementData?.endDate}. Repayment: The Borrower agrees to repay the
       Loan in 12 equal monthly installments of
       {loanAgreementData?.installmentAmount}, beginning on
@@ -33,6 +36,18 @@ const LoanAgreement = ({ loanAgreementData }) => {
       written or oral, relating to the subject matter herein. IN WITNESS WHERE
       OF, the parties here to have executed this Agreement as of the date first
       above written.
+      <br />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: "2%",
+          marginBottom: "2%",
+        }}
+      >
+        <span>Signature Lender</span>
+        <span>Signature Borrower</span>
+      </div>
     </div>
   );
 };

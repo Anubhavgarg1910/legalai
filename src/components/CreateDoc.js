@@ -141,7 +141,7 @@ const CreateDoc = () => {
             <div className="  bg-primary p-[74px] w-[700px] rounded-3xl">
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Date"
                   value={formData[FormKeys.date]}
                   onChange={(e) => {
@@ -151,7 +151,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="LandLord Name"
                   value={formData[FormKeys.landlordName]}
                   onChange={(e) => {
@@ -181,7 +181,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2 "
                   placeholder="Tenant Address"
                   value={formData[FormKeys.tenantAddress]}
                   onChange={(e) => {
@@ -191,7 +191,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2 "
                   placeholder="Rent"
                   value={formData[FormKeys.rent]}
                   onChange={(e) => {
@@ -220,7 +220,7 @@ const CreateDoc = () => {
             <div className="  bg-primary p-[74px] w-[700px] rounded-3xl">
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Date"
                   value={loanData[LoanKeys.date]}
                   onChange={(e) => {
@@ -230,7 +230,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Lender Name"
                   value={loanData[LoanKeys.lenderName]}
                   onChange={(e) => {
@@ -260,7 +260,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2"
                   placeholder="Borrower Address"
                   value={loanData[LoanKeys.borrowerAddress]}
                   onChange={(e) => {
@@ -270,7 +270,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2 "
                   placeholder="Loan Amount"
                   value={loanData[LoanKeys.loanAmount]}
                   onChange={(e) => {
@@ -280,7 +280,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2 "
                   placeholder="Interest Rate"
                   value={loanData[LoanKeys.interestRate]}
                   onChange={(e) => {
@@ -290,7 +290,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2 "
                   placeholder="Start Date"
                   value={loanData[LoanKeys.startDate]}
                   onChange={(e) => {
@@ -300,7 +300,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2 "
                   placeholder="End Date"
                   value={loanData[LoanKeys.endDate]}
                   onChange={(e) => {
@@ -310,7 +310,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2 "
                   placeholder="Installment Amount"
                   value={loanData[LoanKeys.installmentAmount]}
                   onChange={(e) => {
@@ -320,7 +320,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control "
+                  className="form-control p-2 "
                   placeholder="First Installment Date"
                   value={loanData[LoanKeys.firstInstallmentDate]}
                   onChange={(e) => {
@@ -349,7 +349,7 @@ const CreateDoc = () => {
             <div className="  bg-primary p-[74px] w-[700px] rounded-3xl">
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Date"
                   value={empData[EmpKeys.date]}
                   onChange={(e) => {
@@ -359,7 +359,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Employer Name"
                   value={empData[EmpKeys.employerName]}
                   onChange={(e) => {
@@ -371,7 +371,7 @@ const CreateDoc = () => {
                 <input
                   className="form-control p-2"
                   placeholder="Employer Address"
-                  value={empData[EmpKeys.employeeAddress]}
+                  value={empData[EmpKeys.employerAddress]}
                   onChange={(e) => {
                     setEData([EmpKeys.employerAddress], e.target.value);
                   }}
@@ -467,7 +467,7 @@ const CreateDoc = () => {
             <div className="  bg-primary p-[74px] w-[700px] rounded-3xl">
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Date"
                   value={businessData[BusinessKeys.date]}
                   onChange={(e) => {
@@ -477,7 +477,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Party A"
                   value={businessData[BusinessKeys.partyA]}
                   onChange={(e) => {
@@ -487,7 +487,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Business Type"
                   value={businessData[BusinessKeys.businessType]}
                   onChange={(e) => {
@@ -497,7 +497,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Address Party A"
                   value={businessData[BusinessKeys.addressPartyA]}
                   onChange={(e) => {
@@ -507,7 +507,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Party B"
                   value={businessData[BusinessKeys.partyB]}
                   onChange={(e) => {
@@ -517,7 +517,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Address Party B"
                   value={businessData[BusinessKeys.addressPartyB]}
                   onChange={(e) => {
@@ -527,7 +527,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Business Description"
                   value={businessData[BusinessKeys.businessDesc]}
                   onChange={(e) => {
@@ -537,7 +537,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Payment"
                   value={businessData[BusinessKeys.payment]}
                   onChange={(e) => {
@@ -547,7 +547,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Ending Date"
                   value={businessData[BusinessKeys.endingDate]}
                   onChange={(e) => {
@@ -557,7 +557,7 @@ const CreateDoc = () => {
               </div>
               <div className="py-3">
                 <input
-                  className="form-control"
+                  className="form-control p-2"
                   placeholder="Due Date"
                   value={businessData[BusinessKeys.dueDate]}
                   onChange={(e) => {
