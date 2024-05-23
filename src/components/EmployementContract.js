@@ -2,7 +2,12 @@ import React from "react";
 
 const EmployementContract = ({ employementContractData }) => {
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "Courier Prime, monospace",
+        fontWeight: 400,
+      }}
+    >
       This Employment Contract is made and entered into on{" "}
       {employementContractData?.date}
       <br />

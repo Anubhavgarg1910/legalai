@@ -22,3 +22,9 @@
     @apply text-accent-hover;
   }
 }
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
