@@ -2,7 +2,12 @@ import React from "react";
 
 const LoanAgreement = ({ loanAgreementData }) => {
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "Courier Prime, monospace",
+        fontWeight: 400,
+      }}
+    >
       This Loan Agreement is made and entered into on {loanAgreementData?.date}{" "}
       <br />
       by and between: <br />

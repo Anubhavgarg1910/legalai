@@ -2,7 +2,12 @@ import React from "react";
 
 const BusinessContract = ({ businessContractData }) => {
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "Courier Prime, monospace",
+        fontWeight: 400,
+      }}
+    >
       This Business Contract is made and entered into on{" "}
       {businessContractData?.date}
       <br />
